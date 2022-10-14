@@ -60,5 +60,4 @@ public class Course {
         return this.endDate;
     }
 
-
 }
