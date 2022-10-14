@@ -17,7 +17,7 @@ public class StudentAndLecturerTest {
     @BeforeEach
     public void SetUp() {
         DateTime sampleDOB = new DateTime(2000, 11, 29, 4, 20);
-        student = new Student("Eve Harrison", 19464796, sampleDOB);
+        student = new Student("Eve Harrison", 19464796, sampleDOB, "ECE");
         lecturer = new Lecturer("Michael Scott", 1098, sampleDOB);
     }
 

@@ -1,6 +1,7 @@
 package eveHarrison_assignmentOne;
 import org.joda.time.DateTime;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Lecturer {
@@ -46,6 +47,10 @@ public class Lecturer {
 
     public void setLecturerDOB(DateTime DOB) {
         this.lecturerDOB = DOB;
+    }
+
+    public void setLecturerModule(ArrayList<String> lecturerModules) {
+        this.lecturerModules = lecturerModules;
     }
 
     public void addModule(String module) {

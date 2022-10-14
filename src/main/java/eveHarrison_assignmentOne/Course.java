@@ -38,6 +38,8 @@ public class Course {
     public void addModules(Module module) {
         if (!associatedModules.contains(module)) {
             associatedModules.add(module);
+        } else {
+            System.out.println("ERROR: Module already added.");
         }
     }
     public ArrayList<Module> getAssociatedModules(){

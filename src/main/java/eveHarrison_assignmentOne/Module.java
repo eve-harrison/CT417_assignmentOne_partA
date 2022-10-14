@@ -28,6 +28,8 @@ public class Module {
     public void addStudent(Student student) {
         if (!studentList.contains(student)) {
             studentList.add(student);
+        } else {
+            System.out.println("ERROR: Student already added");
         }
     }
     public ArrayList<Student> getListOfStudents(){

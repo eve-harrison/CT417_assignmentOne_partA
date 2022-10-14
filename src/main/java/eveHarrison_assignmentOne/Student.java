@@ -9,12 +9,13 @@ public class Student {
     private DateTime studentDOB;
     private long studentID;
     ArrayList<Module> studentModules = new ArrayList<Module>();
-    private Course course;
+    private String studentsCourse;
 
-    public Student(String studentName, int studentID, DateTime studentDOB) {
+    public Student(String studentName, int studentID, DateTime studentDOB, String studentsCourse) {
         this.studentName = studentName;
         this.studentDOB = studentDOB;
         this.studentID = studentID;
+        this.studentsCourse = studentsCourse;
         this.studentAge = this.getAge();
         this.studentUserName = this.getUserName();
     }
@@ -60,4 +61,11 @@ public class Student {
         return studentModules;
     }
 
+    public void setStudentsCourse(String name) {
+        this.studentsCourse = studentsCourse;
+    }
+
+    public String getStudentsCourse(){
+        return studentsCourse;
+    }
 }
