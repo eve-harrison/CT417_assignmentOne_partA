@@ -9,6 +9,7 @@ public class Student {
     private DateTime studentDOB;
     private long studentID;
     ArrayList<Module> studentModules = new ArrayList<Module>();
+    private Course course;
 
     public Student(String studentName, int studentID, DateTime studentDOB) {
         this.studentName = studentName;
@@ -59,11 +60,4 @@ public class Student {
         return studentModules;
     }
 
-    public void setStudentsCourse(String name) {
-        this.studentsCourse = studentsCourse;
-    }
-
-    public String getStudentsCourse(){
-        return studentsCourse;
-    }
 }
