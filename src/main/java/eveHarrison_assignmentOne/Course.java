@@ -59,5 +59,4 @@ public class Course {
     public DateTime getEndDate() {
         return this.endDate;
     }
-
 }
