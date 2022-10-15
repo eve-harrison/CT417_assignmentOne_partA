@@ -9,13 +9,11 @@ public class Student {
     private DateTime studentDOB;
     private long studentID;
     ArrayList<Module> studentModules = new ArrayList<Module>();
-    private String studentsCourse;
 
-    public Student(String studentName, int studentID, DateTime studentDOB, String studentsCourse) {
+    public Student(String studentName, int studentID, DateTime studentDOB) {
         this.studentName = studentName;
         this.studentDOB = studentDOB;
         this.studentID = studentID;
-        this.studentsCourse = studentsCourse;
         this.studentAge = this.getAge();
         this.studentUserName = this.getUserName();
     }
