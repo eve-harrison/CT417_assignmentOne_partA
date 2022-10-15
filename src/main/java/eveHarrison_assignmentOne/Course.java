@@ -52,7 +52,7 @@ public class Course {
         return this.startDate;
     }
 
-    public void setEndDate(DateTime startDate) {
+    public void setEndDate(DateTime endDate) {
         this.endDate = endDate;
     }
 

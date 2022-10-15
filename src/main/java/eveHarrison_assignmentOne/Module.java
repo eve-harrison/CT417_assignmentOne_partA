@@ -8,7 +8,7 @@ public class Module {
     private String moduleName;
     private ArrayList<Student> studentList = new ArrayList();
 
-    private ArrayList<Course> courseList = new ArrayList();
+    private ArrayList<String> courseList = new ArrayList();
 
     public Module(String moduleName, Lecturer lecturer) {
         this.moduleName = moduleName;
@@ -34,12 +34,12 @@ public class Module {
         return studentList;
     }
 
-    public void addCourses(Course course) {
+    public void addCourses(String course) {
         if (!courseList.contains(course)) {
             courseList.add(course);
         }
     }
-    public ArrayList<Course> getRelatedCourses(){
+    public ArrayList<String> getRelatedCourses(){
         return courseList;
     }
     public void setLecturer(Lecturer lecturer) {

@@ -1,6 +1,7 @@
 package eveHarrison_assignmentOne;
 
 import org.joda.time.DateTime;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +14,13 @@ public class ModuleAndCourseTest {
     private Module module;
     private Course course;
 
+    @BeforeEach
+    public void SetUp() {
+        DateTime sampleDate1 = new DateTime(2022, 9, 03, 04, 06);
+        DateTime sampleDate2 = new DateTime(2023, 05, 04, 04, 06);
+        module = new Module("CT417", new Lecturer("Michael Scott", 1098, sampleDate1));
+        course = new Course("Electronic Engineering", sampleDate1, sampleDate2);
+    }
 
     @Test
     @DisplayName("Get Module Name is Working")
@@ -24,9 +32,11 @@ public class ModuleAndCourseTest {
     @Test
     @DisplayName("Add Course Function Adds to ArrayList")
     public void addModule_addsToArray() {
-        module.addCourses(new Course("Electronic Engineering", null, null));
+        module.addCourses("Electronic Engineering");
+        module.addCourses("Energy Systems Engineering");
         ArrayList result = module.getRelatedCourses();
-        assertEquals("Electronic Engineering" , result);
+        String resultantString = result.toString();
+        assertEquals("[Electronic Engineering, Energy Systems Engineering]" , resultantString);
     }
 
     @Test
@@ -34,6 +44,7 @@ public class ModuleAndCourseTest {
     public void getEndDate_ReturnsDateTimeFormat() {
         course.setEndDate(new DateTime(2022, 9, 3, 4, 6));
         DateTime result = course.getEndDate();
-        assertEquals("03-09-2022", result);
+        String resultantString = result.toString();
+        assertEquals("2022-09-03T04:06:00.000+01:00", resultantString);
     }
 }
