@@ -17,22 +17,24 @@ public class StudentAndLecturerTest {
     @BeforeEach
     public void SetUp() {
         DateTime sampleDOB = new DateTime(2000, 11, 29, 4, 20);
-        student = new Student("Eve Harrison", 19464796, sampleDOB, "ECE");
+        student = new Student("Eve Harrison", 19464796, sampleDOB);
         lecturer = new Lecturer("Michael Scott", 1098, sampleDOB);
     }
 
     @Test
     @DisplayName("Get Username is Working For Student")
     public void getUsernameStudent_ReturnsCorrectInput() {
+        student.setAge(21);
         String result = student.getUserName();
-        assertEquals("Eve Harrison, 19464796", result);
+        assertEquals("Eve Harrison21", result);
     }
 
     @Test
     @DisplayName("Get Username is Working For Lecturer")
     public void getUsernameLecturer_ReturnsCorrectInput() {
+        lecturer.setAge(50);
         String result = lecturer.getUserName();
-        assertEquals("Eve Harrison, 19464796", result);
+        assertEquals("Michael Scott50", result);
     }
 
     @Test
@@ -54,9 +56,10 @@ public class StudentAndLecturerTest {
     @Test
     @DisplayName("Date of Birth Returns Date Time Format")
     public void getDOB_ReturnsDateTimeFormat() {
-        student.setStudentDOB(new DateTime("11-10-2022"));
+        student.setStudentDOB(new DateTime(2000, 11, 29, 4, 20));
         DateTime result = student.getStudentDOB();
-        assertEquals(DateTime.parse("11-10-2022"), result);
+        String resultantString = result.toString();
+        assertEquals(("2000-11-29T04:20:00.000Z"), resultantString);
     }
 
     @Test
@@ -64,7 +67,8 @@ public class StudentAndLecturerTest {
     public void addModule_addsToArray() {
         lecturer.addModule("CT417");
         lecturer.addModule("EE345");
-        ArrayList result = lecturer.getListOfModules();
-        assertEquals("CT417 , EE345", result);
+        ArrayList resultList = lecturer.getListOfModules();
+        String result = resultList.toString();
+        assertEquals("[CT417, EE345]", result);
     }
 }
