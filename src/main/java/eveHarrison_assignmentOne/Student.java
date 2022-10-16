@@ -11,6 +11,8 @@ public class Student {
     ArrayList<Module> studentModules = new ArrayList<Module>();
     private Course course;
 
+    private ArrayList<Module> modules;
+
     public Student(String studentName, int studentID, DateTime studentDOB) {
         this.studentName = studentName;
         this.studentDOB = studentDOB;
@@ -58,6 +60,24 @@ public class Student {
 
     public ArrayList<Module> getListOfModules(){
         return studentModules;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+        this.setModules(course.getAssociatedModules());
+        this.course.addStudent(this);
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setModules(ArrayList<Module> modules) {
+        this.modules = modules;
+    }
+
+    public ArrayList<Module> getModules() {
+        return modules;
     }
 
 }
