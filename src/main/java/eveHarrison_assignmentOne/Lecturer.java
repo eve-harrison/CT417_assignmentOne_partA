@@ -10,7 +10,7 @@ public class Lecturer {
     private DateTime lecturerDOB;
     private int lecturerID;
     private String lecturerUserName;
-    private ArrayList<String> lecturerModules = new ArrayList();
+    private ArrayList<Module> lecturerModules = new ArrayList();
 
     public Lecturer(String lecturerName, int lecturerID, DateTime lecturerDOB) {
         this.lecturerName = lecturerName;
@@ -49,19 +49,19 @@ public class Lecturer {
         this.lecturerDOB = DOB;
     }
 
-    public void setLecturerModule(ArrayList<String> lecturerModules) {
+    public void setLecturerModule(ArrayList<Module> lecturerModules) {
         this.lecturerModules = lecturerModules;
     }
 
-    public void addModule(String module) {
+    public void addModule(Module module) {
         lecturerModules.add(module);
     }
 
-    public void removeModule(Module module) {
-        lecturerModules.remove(module);
+    public boolean removeModule(Module module) {
+        return lecturerModules.remove(module);
     }
 
-    public ArrayList<String> getListOfModules(){
+    public ArrayList<Module> getListOfModules(){
         return lecturerModules;
     }
 

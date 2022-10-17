@@ -65,10 +65,14 @@ public class StudentAndLecturerTest {
     @Test
     @DisplayName("Add Module Function Adds to ArrayList")
     public void addModule_addsToArray() {
-        lecturer.addModule("CT417");
-        lecturer.addModule("EE345");
-        ArrayList resultList = lecturer.getListOfModules();
-        String result = resultList.toString();
-        assertEquals("[CT417, EE345]", result);
+        Module newModule = new Module("CT417", new Lecturer("Michael", 105567, null));
+        ArrayList<Module> lecturersModules = new ArrayList<>();
+        lecturer.addModule(newModule);
+        lecturersModules.add(newModule);
+        assertEquals(lecturersModules, lecturer.getListOfModules());
+        assertEquals(newModule, lecturer.getListOfModules().get(0));
+        assertTrue(lecturer.removeModule(newModule));
+        assertTrue(lecturer.getListOfModules().isEmpty());
+
     }
 }

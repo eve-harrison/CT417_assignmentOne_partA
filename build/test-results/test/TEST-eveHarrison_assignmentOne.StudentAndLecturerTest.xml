@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="eveHarrison_assignmentOne.StudentAndLecturerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-10-15T17:22:47" hostname="DESKTOP-CF17FUP" time="0.226">
+<testsuite name="eveHarrison_assignmentOne.StudentAndLecturerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-17T16:18:45" hostname="DESKTOP-CF17FUP" time="0.127">
   <properties/>
-  <testcase name="Get Username is Working For Lecturer" classname="eveHarrison_assignmentOne.StudentAndLecturerTest" time="0.171"/>
-  <testcase name="Add Module Function Adds to ArrayList" classname="eveHarrison_assignmentOne.StudentAndLecturerTest" time="0.001"/>
-  <testcase name="Set Name is Working in Student" classname="eveHarrison_assignmentOne.StudentAndLecturerTest" time="0.002"/>
-  <testcase name="Date of Birth Returns Date Time Format" classname="eveHarrison_assignmentOne.StudentAndLecturerTest" time="0.04"/>
-  <testcase name="Get Username is Working For Student" classname="eveHarrison_assignmentOne.StudentAndLecturerTest" time="0.002"/>
-  <testcase name="Set Age is Working in Lecturer" classname="eveHarrison_assignmentOne.StudentAndLecturerTest" time="0.002"/>
+  <testcase name="Add Module Function Adds to ArrayList" classname="eveHarrison_assignmentOne.StudentAndLecturerTest" time="0.127"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
